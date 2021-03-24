@@ -16,12 +16,13 @@
 <script>
     function alterarTxt() {
         let xhttp = new XMLHttpRequest();
+        let file = "https://wilton-filho.github.io/PFJS-GitHub/Ajax/aplicacao01/bd.txt"
         xhttp.onreadystatechange = function () {
             if ((xhttp.readyState == 4) && (xhttp.status == 200)) {
                 document.getElementById("txtMsg").innerHTML = xhttp.responseText;
             }
         }
-        xhttp.open("GET","bd.txt",true);
+        xhttp.open("GET",file,true);
         xhttp.send();
     }
 </script>
