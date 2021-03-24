@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Primeiro exemplo de AJAX</h2>
+    <p id="txtInfo">Clique no botão abaixo para mudar este texto.</p>
+    <form>
+        <button type="button" onclick="carregarTxt()">Alterar texto</button>
+    </form>
+
+    <script>
+        function carregarTxt() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtInfo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "bd.txt", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>

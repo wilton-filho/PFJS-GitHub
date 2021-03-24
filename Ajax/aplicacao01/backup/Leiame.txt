@@ -1,0 +1,3 @@
+Para testar essa aplicação é necessário subí-la para algum serviço de hospedagem de páginas (Ex: www.awardspace.com)
+
+Objetivo: carregar de forma assíncrona informações localizadas dentro de um arquivo de texto.
