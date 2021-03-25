@@ -1,5 +1,5 @@
 function loadCustomers() {
-    let xhttp = XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
     let file = "../json/clientes.json";
 
     xhttp.onreadystatechange() = function () {
