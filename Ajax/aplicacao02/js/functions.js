@@ -2,7 +2,7 @@ function loadCustomers() {
     let xhttp = new XMLHttpRequest();
     let file = "../json/clientes.json";
 
-    xhttp.onreadystatechange() = function () {
+    xhttp.onreadystatechange = function () {
         if ((this.readyState == 4) && (this.status == 200)) {
             printCustomers(this.responseText);
         }
