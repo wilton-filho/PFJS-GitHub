@@ -1,6 +1,6 @@
 function loadCustomers() {
     let xhttp = new XMLHttpRequest();
-    let file = "../json/clientes.json";
+    let file = "https://wilton-filho.github.io/PFJS-GitHub/Ajax/aplicacao02/json/clientes.json";
 
     xhttp.onreadystatechange = function () {
         if ((this.readyState == 4) && (this.status == 200)) {
