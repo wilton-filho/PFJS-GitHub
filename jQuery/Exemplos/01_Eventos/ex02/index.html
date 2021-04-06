@@ -1,0 +1,33 @@
+<!--Oculta um parágrafo ao clicar sobre ele -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oculta parágrafo específico usando ID</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <img src="img/pensativo.png" alt="">
+    <p id="msg">zzzzzzz!!!</p>
+</body>
+<script>
+    $(function() {
+        $("img").on({
+            mouseenter: function() {
+                $("#msg").html("Seja bem-vindo!");
+                $(this).attr("src","img/alegre.png");
+            },
+            click: function() {
+                $("#msg").html("O que você precisa?");
+                $(this).attr("src","img/assustado.png");
+            },
+            mouseout: function() {
+                $("#msg").html("Até mais tarde!");
+                $(this).attr("src","img/pensativo.png");
+            }
+        });
+    });
+</script>
+</html>
