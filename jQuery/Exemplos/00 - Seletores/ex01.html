@@ -1,25 +1,25 @@
+<!-- Ocultar todos os parágrafos de uma página -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 01</title>
+    <title>Ocultar todos os parágrafos</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <p id="par1">Parágrafo com id</p>
-    <button id="btn1">Ocultar parágrafo com ID</button>
+    <h1>Título de página</h1>
+    <p>Sou o parágrafo 1</p>
+    <p>Sou o parágrafo 2</p>
+    <p>Sou o parágrafo 3</p>
+    <button>Ocultar parágrafos</button>
 </body>
 <script>
-    $(document).ready(function(){
-        $("#btn1").click(function () {$("#par1").hide()});
-        // Usando Arrow Function, pode ficar assim:
-        //$("#btn1").click(()=> $("#par1").hide());
+    $(document).ready(function() {
+        $("button").click(function() {
+            $("p").hide();
+        });
     });
-
-    
 </script>
-
 </html>

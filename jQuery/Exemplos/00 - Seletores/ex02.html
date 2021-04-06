@@ -1,23 +1,25 @@
+<!--Oculta um parágrafo específico de uma página ao pressionar btn, utilizando ID-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oculta parágrafo específico usando ID</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <h1>Título de página</h1>
     <p>Sou o parágrafo 1</p>
-    <p>Sou o parágrafo 2</p>
+    <p id="par1">Sou o parágrafo 2</p>
     <p>Sou o parágrafo 3</p>
-    <button>Ocultar parágrafos</button>
+    <button>Ocultar o parágrafo 2</button>
 </body>
 <script>
     $(document).ready(function() {
         $("button").click(function() {
-            $("p").hide();
+            $("#par1").hide();
         });
     });
 </script>
