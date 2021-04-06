@@ -1,4 +1,4 @@
-<!--Oculta um parágrafo específico de uma página ao pressionar btn, utilizando ID-->
+<!--Oculta um parágrafo ao clicar sobre ele -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,15 +11,12 @@
 </head>
 <body>
     <h1>Título de página</h1>
-    <p>Sou o parágrafo 1</p>
-    <p id="par1">Sou o parágrafo 2</p>
-    <p>Sou o parágrafo 3</p>
-    <button>Ocultar parágrafos</button>
+    <p id="paragrafo">Clique sobre mim para eu desaparecer</p>
 </body>
 <script>
-    $(document).ready(function() {
-        $("button").click(function() {
-            $("#par1").hide();
+    $(function() {
+        $("#paragrafo").click(function() {
+            $("#paragrafo").hide();
         });
     });
 </script>
