@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oculta parágrafo específico usando ID</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .configTxt {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            background-color: gray; /*Nao sera adicionada, pois ja existe*/
+        }
+    </style>
 </head>
 <body>
     <img src="img/pensativo.png" alt="">
@@ -17,16 +25,22 @@
         $("img").on({
             mouseenter: function() {
                 $("#msg").html("Seja bem-vindo!");
+                $("#msg").css("background-color","pink");
                 $(this).attr("src","img/alegre.png");
             },
             click: function() {
                 $("#msg").html("O que você precisa?");
+                $("#msg").css({"font-size":"40px","background-color":"yellow"});
                 $(this).attr("src","img/assustado.png");
             },
-            mouseout: function() {
+            mouseleave: function() {
                 $("#msg").html("Até mais tarde!");
+                // Remove todo o CSS
+                $("#msg").removeAttr("style");
+                // Adiciona novas propriedades
+                $("#msg").addClass("configTxt");
                 $(this).attr("src","img/pensativo.png");
-            }
+            },
         });
     });
 </script>
