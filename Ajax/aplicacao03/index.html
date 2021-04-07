@@ -8,58 +8,20 @@
 </head>
 <body>
     <form>
-        <select id="sexo">
-            <option value="">Selecione o sexo</option>
-            <option value="*">Todos</option>
+        <label>Sexo:</label>
+        <select id="sexList">
+            <option value="*">Todos os sexos</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
         </select>
-        <input type="button" value="Carregar clientes" onclick="loadCustomers()">
+        <input type="button" value="Carregar clientes" onclick="loadCustomers('sexList','customersTab')">
     </form>
-    <p>Lista de consumidores:</p>
-    <table id="tabCustomers">
-        <thead>
-            <tr>
-                <td>Nome</td>
-                <td>Idade</td>
-            </tr>
-        </thead>   
-        <tbody></tbody>         
+    <p>Lista de clientes:</p>
+    <table id="customersTab">
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
     </table>
 </body>
-<script>
-    function loadCustomers() {
-        var file = "json/clientes.json";
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (xhttp.status == 200 && xhttp.readyState == 4) {
-                let sexo = document.getElementById("sexo").value;
-                loadInfoCustomers(xhttp, sexo);
-            }
-        }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-    }
-    function loadInfoCustomers(obj, sexo) {
-        var tab = document.getElementById("tabCustomers");
-
-        registro = JSON.parse(obj.responseText);
-
-        registro.clientes.forEach(elemento => {
-            if (elemento.sexo == sexo) {
-                var linha = document.createElement("tr");
-                var colunaNome = document.createElement("td");
-                var colunaIdade = document.createElement("td");
-                nome = document.createTextNode(elemento.nome);
-                idade = document.createTextNode(elemento.idade);
-                colunaNome.appendChild(nome);
-                colunaIdade.appendChild(idade);
-                linha.appendChild(colunaNome);
-                linha.appendChild(colunaIdade);
-                tab.appendChild(linha);
-            }
-        });
-    }
-</script>
 </html>

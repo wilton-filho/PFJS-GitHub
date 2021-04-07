@@ -1,8 +1,7 @@
 {"clientes": [
-    {"nome": "Jose", "sexo": "M", "idade": "10"},
-    {"nome": "Maria", "sexo": "F", "idade": "20"},
-    {"nome": "Carla", "sexo": "F", "idade": "30"},
-    {"nome": "Antonio", "sexo": "M", "idade": "40"},
-    {"nome": "Ana", "sexo": "F", "idade": "50"},
-    {"nome": "Wilton", "sexo": "M", "idade": "60"}
+    {"nome": "Maria", "sexo": "F", "idade": "45"},
+    {"nome": "José", "sexo": "M", "idade": "33"},
+    {"nome": "Ana", "sexo": "F", "idade": "85"},
+    {"nome": "Antônio", "sexo": "M", "idade": "78"},
+    {"nome": "Carla", "sexo": "F", "idade": "14"}
 ]}
