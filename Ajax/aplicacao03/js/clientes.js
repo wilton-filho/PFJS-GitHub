@@ -16,7 +16,7 @@ function loadInfoCustomers(xhttp, sexList, customersTab) {
     registro = JSON.parse(xhttp.responseText);
 
     registro.clientes.forEach(elemento => {
-        if (elemento.sexo == sexType.value || sexType.index == 0) {
+        if ((elemento.sexo == sexType.value) || (sexType.index == 0)) {
             var line = document.createElement("tr");
             var colName = document.createElement("td");
             var colAge = document.createElement("td");
