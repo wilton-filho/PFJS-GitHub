@@ -1,0 +1,1 @@
+Objetivo: aprender a carregar de forma assíncrona informações localizadas num arquivo .json localizado no servidor. Portanto, para que essa aplicação funcione é necessário carregá-la num servidor (Ex: www.awardspace.com)
