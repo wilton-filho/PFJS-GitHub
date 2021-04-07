@@ -1,0 +1,24 @@
+<!--Oculta um parágrafo ao clicar sobre ele -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oculta parágrafo específico usando ID</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Título de página</h1>
+    <p id="paragrafo">Clique sobre mim para eu desaparecer2</p>
+    <p>Sou outro parágrafo</p>
+</body>
+<script>
+    $(function() {
+        $("#paragrafo").click(function() {
+            $(this).hide();
+        });
+    });
+</script>
+</html>
