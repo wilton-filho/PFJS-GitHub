@@ -1,5 +1,5 @@
 function loadCustomers(sexList, customersTab) {
-    var file = "../json/clientes.json";
+    var file = "https://wilton-filho.github.io/PFJS-GitHub/Ajax/aplicacao03/json/clientes.json";
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
