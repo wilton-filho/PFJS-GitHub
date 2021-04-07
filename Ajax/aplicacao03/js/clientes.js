@@ -1,5 +1,5 @@
 function loadCustomers(sexList, customersTab) {
-    var file = "json/clientes.json";
+    var file = "../json/clientes.json";
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
