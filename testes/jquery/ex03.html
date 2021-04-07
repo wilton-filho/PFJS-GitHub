@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar todos os parágrafos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Ocultar todos os parágrafos</h1>
+    <!--p*3{Eu sou o paragrafo $}-->
+    <p>Eu sou o parágrafo 1</p>
+    <p id="paragrafo">Eu sou o parágrafo 2</p>
+    <p>Eu sou o parágrafo 3</p>
+    <button>Ocultar o parágrafo 2</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#paragrafo").hide();
+        });
+    });
+</script>
+</html>
