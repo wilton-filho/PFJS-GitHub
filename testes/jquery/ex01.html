@@ -13,7 +13,11 @@
     <button>Desapareça o texto</button>
 </body>
 <script>
-    // Sintaxe do jQuery: $(seletor).acao()
-    $("button").click(() => $("p").hide());
+    // Opcao 1: para testar se o documento foi carregado
+    $(document).ready(function() {
+    // Opcao 2: para testar se o documento foi carregado
+    //$(function () {
+        $("button").click(() => $("p").hide());
+    });
 </script>
 </html>
