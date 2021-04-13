@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Função callback em jQuery</title>
+</head>
+
+<body>
+    <h1>Efeito de aparecer/ocultar usando jQuery</h1>
+    <p>Este texto irá aparecer/desaparecer</p>
+    <button id="btnOcultar">Ocultar</button>
+    <button id="btnMostrar">Mostrar</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#btnOcultar").click(function () {
+            // Velocidades diferentes
+            //$("p").hide("slow");
+            //$("p").hide("fast");
+            //$("p").hide(5000);
+            $("p").hide("slow", function () {
+                alert("Fim do efeito")
+            });
+        });
+        $("#btnMostrar").click(function () {
+            $("p").show("slow");
+        });
+    });
+</script>
+
+</html>
