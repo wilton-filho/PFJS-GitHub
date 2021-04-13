@@ -15,11 +15,9 @@
     <form>
         <label for="">Nome:</label>
         <input type="text" id="txtNome">
-        <button id="btn2">Ver nome</button>
     </form>
 </body>
 <script>
-    document.getElementById
     $(document).ready(function(){
         $("#btn1").click(function() {
             // -------- Equivalente ao innerHTML: text():
@@ -30,13 +28,10 @@
             alert(txt2);
             // 2) Para mudar faça assim:
             $("#par1").text("Mudei o texto do parágrafo 1");
-        });
 
-        $("#btn2").click(function() {
-             // -------- Equivalente ao document.getElementById("campo").value: val()):
+            // -------- Equivalente ao document.getElementById("campo").value: val()):
             alert(`Nome = ${$("#txtNome").val()}`);
         });
-
     });
 </script>
 </html>
