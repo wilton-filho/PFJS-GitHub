@@ -17,10 +17,12 @@
 <script>
     $(document).ready(function () {
         $("#btnOcultar").click(function () {
-            // Velocidades diferentes
+            // Velocidades diferentes:
             //$("p").hide("slow");
             //$("p").hide("fast");
             //$("p").hide(5000);
+
+            // Exemplo de função callback:
             $("p").hide("slow", function () {
                 alert("Fim do efeito")
             });
