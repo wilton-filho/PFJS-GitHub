@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="par1">Sou o <b>texto</b> de número 1</p>
+    <button id="btn1">Botão do texto 1</button>
+
+    <br><br>
+    <form>
+        <label for="">Nome:</label>
+        <input type="text" id="txtNome">
+        <button id="btn2">Ver nome</button>
+    </form>
+</body>
+<script>
+    document.getElementById
+    $(document).ready(function(){
+        $("#btn1").click(function() {
+            // -------- Equivalente ao innerHTML: text():
+            // 1) Para acessar faça assim:
+            let txt1 = $("#par1").text();
+            let txt2 = $("#par1").html(); // retorna o texto com as tags internas
+            alert(txt1);
+            alert(txt2);
+            // 2) Para mudar faça assim:
+            $("#par1").text("Mudei o texto do parágrafo 1");
+        });
+
+        $("#btn2").click(function() {
+             // -------- Equivalente ao document.getElementById("campo").value: val()):
+            alert(`Nome = ${$("#txtNome").val()}`);
+        });
+
+    });
+</script>
+</html>
