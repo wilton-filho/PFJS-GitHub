@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+    margin:0;
+}
+header, footer {
+    text-align: center;
+    height: 70px;
+}
+header {
+    background-color: blue;
+}
+footer {
+    background-color: green;
+}
+.infoPanel {
+    float:left;
+    width: 50%;
+    font-family: 'Press Start 2P', cursive;
+    font-size:25px;
+    padding:20px;
+    text-shadow: 2px 2px 2px black;
+    color:white;
+}
+footer select, button {
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    padding:5px;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+footer button {
+    padding: 10px;
+    width: 150px;
+}
+footer button:hover, footer select:hover {
+    background-color: orangered;
+    text-shadow: 1px 1px 1px black;
+    color:white;
+    box-shadow: 1px 1px 5px black;
+}
+.panelInfo p {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 120px;
+    text-shadow: 5px 5px 5px black;
+}
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+main, section {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    /*background-image: url('../img/terra2.jpg');*/
+    background-repeat: repeat;
+}
+.board {
+    margin:auto;
+}
+.imgBoard {
+    float:left;
+    text-align: center;
+}
+footer > div {
+    float:left;
+}
+.panelInfo {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    border:10px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panelInfo p {
+    color: white;
+}
+
