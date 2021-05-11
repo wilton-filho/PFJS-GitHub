@@ -1,35 +1,30 @@
-// Espera um timer finalizar para exibir um texto na página
-// 1ª Opção: Usando Callback
-$(document).ready(function() {
+// Exemplo 02: Adicionar 2 numeros usando callback
+/*$(document).ready(function() {
     $("#btnView").click(function() {
-        setTimeout(function() {
-            $("body").append($("<p>Fim do timer!</p>"));
-            showMsg("Sucesso");
-        }, 2000);
+        add();
     })
 });
-function showMsg($msg) {
-    $("body").append($("<p></p>").text(`Felizmente - ${$msg}`));
+function add() {
+    var a = b = 10;
+    (!isNaN(a) && !isNaN(b))?resolve(a+b):reject('Erro');
 }
+function resolve(res){
+    console.log(res);
+}
+function reject(err){
+    console.log(err);
+}*/
 
-// 2ª Opção: Usando Promise
-/*
+// Exemplo 02: Adicionar 2 numeros usando Promise
 $(document).ready(function() {
     $("#btnView").click(function() {
-        let $promise = new Promise(function(resolve, reject){
-            setTimeout(function() {
-                $("body").append($("<p>Fim do timer!</p>"));
-                resolve('SUCESSO!');
-                reject('ERRO');
-            }, 2000);
-            
+        var $p = new Promise(function(resolve, reject){
+            //var a = b = 10;
+            var a = "wilton"; b = 10;
+            (!isNaN(a) && !isNaN(b))?resolve(a+b):reject('Erro');
         });
-        $promise
-            .then(($msg) => {
-                $("body").append($("<p></p>").text(`Felizmente - ${$msg}`));
-            }).catch((err) => {
-                $("body").append($("<p></p>").text(`Infelizmente - ${$msg}`));
-            });
+        $p
+         .then(function(res){console.log(res);})
+         .catch(function(err){console.log(err);})
     })
 });
-*/
