@@ -2,14 +2,14 @@
 
 $(document).ready(function() {
     $("#btnView").click(function() {
-        showMsg();
+        add();
     })
 });
 
-async function showMsg() {
-    var $p1 = new Promise(function(resolve, reject) {
-        //var a = b = 10;
-        var a = "x"; b = 10;
+async function add() {
+    var $p1 = new Promise(function(resolve) {
+        var a = b = 10;
+        //var a = "x"; b = 10;
         (!isNaN(a) && !isNaN(b))?resolve(a+b):resolve('Erro!!!');
     });
     $msg = await $p1;
