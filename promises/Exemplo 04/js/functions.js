@@ -1,7 +1,7 @@
 // Exemplo 04: Espera um timer finalizar para exibir um texto na página usando Promise e async
 
 // 1ª Opção: Usando Callback
-$(document).ready(function() {
+/*$(document).ready(function() {
     $("#btnView").click(function() {
         setTimeout(function() {
             $("body").append($("<p>Fim do timer!</p>"));
@@ -11,10 +11,10 @@ $(document).ready(function() {
 });
 function showMsg($msg) {
     $("body").append($("<p></p>").text(`Felizmente - ${$msg}`));
-}
+}*/
 
 // 2ª Opção: Usando Promise
-/*$(document).ready(function() {
+$(document).ready(function() {
     $("#btnView").click(function() {
         let $promise = new Promise(function(resolve, reject){
             setTimeout(function() {
@@ -30,4 +30,4 @@ function showMsg($msg) {
             $("body").append($("<p></p>").text(`Infelizmente - ${$err}`));
         });
     })
-});*/
+});
