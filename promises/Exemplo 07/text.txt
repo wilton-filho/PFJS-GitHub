@@ -1,2 +1,0 @@
-Prof: Wilton de Paula Filho
-Disciplina: Projeto Front-end Web JavaScript
