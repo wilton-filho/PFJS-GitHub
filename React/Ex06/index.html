@@ -12,12 +12,12 @@
 </head>
 <body>
     <div id="root"></div>
-    
     <script type="text/babel">
         function Welcome(props) {
             return <h1>Hello, {props.firstname} {props.surname}</h1>;
         }
-        const element = <Welcome firstname="Wilton" surname="Filho"/>
+        const name = "Wilton";
+        const element = <Welcome firstname={name} surname="Filho"/>
         ReactDOM.render(element,document.getElementById("root"));
     </script>
 </body>
