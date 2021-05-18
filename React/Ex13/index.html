@@ -27,11 +27,9 @@
         let height = prompt('Qual a ALTURA da caixa (0 a 400)');
 
         function ResizeBox(props) {
-            return 
-                <div className="box" style={{width:props.boxWidth+"px",height:props.boxHeight+"px"}}>
-                    <p>Olá, {props.username}!</p>
-                </div>
-            ;
+            return <div className="box" style={{width:props.boxWidth+"px",height:props.boxHeight+"px"}}>
+                        <p>Olá, {props.username}!</p>
+                   </div>;
         }
         const element = <ResizeBox username={name} boxWidth={width} boxHeight={height}/>
         ReactDOM.render(element, document.getElementById("root"))
