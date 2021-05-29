@@ -15,24 +15,42 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        class Time extends React.Component {
+        // PASSO 1: Criar a classe Time
+        /*class Time extends React.Component {
+            render() {
+                return (
+                    <p>{new Date().toLocaleTimeString()}</p>
+                );
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));*/
 
+        // PASSO 2: Criar o construtor da classe
+        class Time extends React.Component {
             constructor(props) {
                 super(props);
-                let date = new Date();
-                this.state = {date};
+                this.state = {data: new Date()};
+            }
+            render() {
+                return (<p>{this.state.data.toLocaleTimeString()}</p>);
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));
+
+
+
+        /*class Time extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {date: new Date().toLocaleTimeString()};
             }
             render() {
                 return (
-                    <p>this.state.toLocaleTimeString()</p>
+                    <p>{this.state.date}</p>
                 );
             }
-
         }
-
-
-
-
+        ReactDOM.render(<Time />, document.getElementById("root"));*/
     </script>
 </body>
 
