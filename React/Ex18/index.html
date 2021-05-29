@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // PASSO 1: Criar a classe Time
+        /*class Time extends React.Component {
+            render() {
+                return (
+                    <p>{new Date().toLocaleTimeString()}</p>
+                );
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));*/
+
+        // PASSO 2: Criar o construtor da classe
+        class Time extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {data: new Date()};
+            }
+            render() {
+                return (<p>{this.state.data.toLocaleTimeString()}</p>);
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));
+
+
+
+        /*class Time extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {date: new Date().toLocaleTimeString()};
+            }
+            render() {
+                return (
+                    <p>{this.state.date}</p>
+                );
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));*/
+    </script>
+</body>
+
+</html>
