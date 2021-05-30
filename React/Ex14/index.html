@@ -10,47 +10,97 @@
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Document</title>
-    <style>
-        .buble {
-            border: 1px solid black;
-            background-color:yellow;
-            width:50px;
-            height:50px;
-            text-align: center;
-            position: absolute;
-        }
-    </style>
 </head>
 
 <body>
     <div id="root"></div>
-
     <script type="text/babel">
-        function getColor() {
-            return Math.floor(Math.random()*256);
+        // PASSO 1: Criar a classe Time
+        /*class Time extends React.Component {
+            render() {
+                return <p>Hora atual: {this.props.date.toLocaleTimeString()}</p>;
+            }
         }
-        function CreateBuble() {
-            let sizeBuble = Math.floor(Math.random()*100)+51;
-            let leftBuble = Math.floor(Math.random()*(window.innerWidth-sizeBuble));
-            let topBuble  = Math.floor(Math.random()*(window.innerHeight-sizeBuble));
+        function RealTime() {
+            const element = <Time date={new Date()} />
+            ReactDOM.render(element, document.getElementById("root"));
+        }
+        setInterval(RealTime, 1000);*/
 
-            let element = <div className="buble" style={{width:sizeBuble+"px",height:sizeBuble+"px",top:topBuble+"px",left:leftBuble+"px"}}>
-                             Hello!
-                          </div>;
-            return element;
+        // PASSO 2: Criar o construtor da classe
+        /*class Time extends React.Component {
+            constructor(props){
+                super(props);
+                this.date = {date: new Date()};
+            }
+            render() {
+                return <p>Hora atual: {this.props.date.toLocaleTimeString()}</p>;
+            }
         }
-        function StartGame() {
-            return (
-                <div>
-                    <CreateBuble/>
-                    <CreateBuble/>
-                    <CreateBuble/>
-                </div>
-            );
+        function RealTime() {
+            ReactDOM.render(<Time date={new Date()} />, document.getElementById("root"));
         }
-        const element = <StartGame/>;
-        //ReactDOM.render(element, document.getElementById("root"));
-        ReactDOM.render(<StartGame/>, document.getElementById("root"));
+        setInterval(RealTime, 1000);*/
+
+        // PASSO 3: Incorporar state ao componente
+        /*class Time extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {date: new Date()};
+            }
+            render() {
+                return <p>Hora atual: {this.state.date.toLocaleTimeString()}</p>;
+            }
+        }
+        ReactDOM.render(<Time/>, document.getElementById("root"));*/
+
+        // PASSO 4: Declarar os métodos para a montagem e desmontagem do componente
+        /*class Time extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {date: new Date()};
+            }
+            componentDidMount() {}
+            destroyed() {}
+            componentWillUnmount() {
+                return <p>Hora atual: {this.state.date.toLocaleTimeString()}</p>;
+            }
+        }
+        ReactDOM.render(<Time/>, document.getElementById("root"));*/
+        
+        // PASSO 4 (continuando): Implementando componentDidMount()
+        /*class Time extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {date: new Date()};
+            }
+            componentDidMount() {
+                setInterval(()=>this.setState({date: new Date()}),1000);
+            }
+            componentWillUnmount() {}
+            render() {
+                return <p>Hora atual: {this.state.date.toLocaleTimeString()}</p>;
+            }
+        }
+        ReactDOM.render(<Time/>, document.getElementById("root"));*/
+
+        // PASSO 4 (finalizando): Implementando componentWillUnmount()
+        class Time extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {date: new Date()};
+            }
+            componentDidMount() {
+                this.timerID = setInterval(()=>this.setState({date: new Date()}),1000);
+            }
+            componentWillUnmount() {
+                clearInterval(this.timerID);
+            }
+            render() {
+                return <p>Hora atual: {this.state.date.toLocaleTimeString()}</p>;
+            }
+        }
+        ReactDOM.render(<Time/>, document.getElementById("root"));
     </script>
 </body>
 

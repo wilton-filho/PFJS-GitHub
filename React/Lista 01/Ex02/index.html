@@ -15,14 +15,11 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        function Time(props) {
-            return <p>Hora atual: {props.date.toLocaleTimeString()}</p>
+        function Time() {
+            return <p>{new Date().toLocaleTimeString()}</p>
         }
-        function RealTime() {
-            const element = <Time date={new Date()}/>
-            ReactDOM.render(element, document.getElementById("root"));
-        }
-        setInterval(RealTime, 1000);
+        const element = <Time/>
+        ReactDOM.render(element, document.getElementById("root"));
     </script>
 </body>
 

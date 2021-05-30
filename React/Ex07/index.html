@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +7,18 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
     <title>Document</title>
 </head>
-
 <body>
-    <p>Informe um número aleatório entre 1 e 10</p>
-    <form>
-        <input type="text" name="" id="txtNumber">
-        <input type="button" value="Conferir" onclick="validateNumber()"></button>
-    </form>
     <div id="root"></div>
-
     <script type="text/babel">
-        const randNumber = Math.floor(Math.random() * 10) + 1;
-        let username = prompt("Qual o seu nome?");
-
-        function CheckNumber(props) {
-            if (!username) username = "Visitante";
-            if (props.numberUser == randNumber) return <p>{username}, parabéns. CERTA RESPOSTA!</p>;
-            else return (props.numberUser > randNumber) ? <p>{username}, você errou. Tente um número MENOR!</p> : <p>{username}, você errou. Tente um número MAIOR!</p>
+        function Welcome(props) {
+            return <h1>Hello, {props.firstname} {props.surname}</h1>;
         }
-
-        function validateNumber() {
-            let txtNumber = document.getElementById("txtNumber").value;
-            const element = <CheckNumber numberUser={txtNumber} />
-            ReactDOM.render(element, document.getElementById("root"));
-        }
+        const name = "Wilton";
+        const element = <Welcome firstname={name} surname="Filho"/>
+        ReactDOM.render(element,document.getElementById("root"));
     </script>
 </body>
-
 </html>

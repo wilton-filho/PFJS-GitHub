@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
     <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
-    <title>Document</title>
-</head>
-<body>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
     <div id="root"></div>
     <script type="text/babel">
-        function Welcome(props) {
-            return <h1>Hello, {props.firstname} {props.surname}</h1>;
-        }
-        const name = "Wilton";
-        const element = <Welcome firstname={name} surname="Filho"/>
-        ReactDOM.render(element,document.getElementById("root"));
+        let cont = 0;
+        function contador() {
+           const element = (
+               <div>
+                    <h1>Contador</h1>
+                    <p>Contador: {++cont}</p>
+               </div>
+           );
+           ReactDOM.render(element, document.getElementById("root"));
+       }
+       setInterval(contador, 1000);
     </script>
-</body>
+  </body>
 </html>

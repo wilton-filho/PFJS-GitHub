@@ -13,16 +13,17 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root"><p>Contador = 0</p></div>
+    <button id="btn" onclick="incrementar()">Incrementar</button>
     <script type="text/babel">
-        function Time(props) {
-            return <p>Hora atual: {props.date.toLocaleTimeString()}</p>
+        let contador = 0;
+        function Contador() {
+            return <p>Contador = {++contador}</p>;
         }
-        function RealTime() {
-            const element = <Time date={new Date()}/>
+        function incrementar() {
+            const element = <Contador/>;
             ReactDOM.render(element, document.getElementById("root"));
         }
-        setInterval(RealTime, 1000);
     </script>
 </body>
 

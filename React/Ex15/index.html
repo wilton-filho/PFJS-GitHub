@@ -14,26 +14,16 @@
 
 <body>
     <div id="root"></div>
-
     <script type="text/babel">
-
-        // Exemplo de conceito de uma função "pura"
-        function ShowName(props) {
-            return <h1>Nome dentro da função: {props.name}</h1>;
+        class ClassName extends React.Component {
+            constructor(props){
+                super(props);
+            }
+            componentDidMount() {}
+            componentWillUnmount() {}
+            render() {return <p>Esquele de um componente React</p>;}
         }
-        let name = "Wilton";
-        const element = <ShowName name="Wilton"/>
-        ReactDOM.render(element, document.getElementById("root"));
-
-        // Exemplo de conceito de uma função "impura"
-        /*function ShowName(props) {
-            props.name = "Maria";
-            return <h1>Nome dentro da função: {props.name}</h1>;
-        }
-        let name = "Wilton";
-        const element = <ShowName name="Wilton"/>
-        ReactDOM.render(element, document.getElementById("root"));*/
-
+        ReactDOM.render(<ClassName/>, document.getElementById("root"));
     </script>
 </body>
 

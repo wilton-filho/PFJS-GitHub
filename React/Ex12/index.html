@@ -13,20 +13,22 @@
 </head>
 
 <body>
-    <div id="root"><p>Contador = 0</p></div>
-    <button id="btn" onclick="play()">Play contador</button>
+    <div id="root"></div>
     <script type="text/babel">
-        let contador = 0;
-        function Contador() {
-            return <p>Contador = {++contador}</p>;
+
+        // Hello, World! usando função
+        /*function HelloWorld() {
+            return <p>Hello, World!</p>;
         }
-        function incrementar() {
-            const element = <Contador/>;
-            ReactDOM.render(element, document.getElementById("root"));
+        ReactDOM.render(<HelloWorld />, document.getElementById("root"));*/
+
+        // Hello, World! usando Classe
+        class HelloWorld extends React.Component {
+            render() {
+                return <p>Hello, World!</p>;
+            }
         }
-        function play() {
-            setInterval(incrementar, 1000);
-        }
+        ReactDOM.render(<HelloWorld/>, document.getElementById("root"));
     </script>
 </body>
 
