@@ -20,4 +20,10 @@ $(document).ready(function() {
     }
     showTxtFile("text.txt");
   });
+
+  /*async function functionName() {
+    res1 = await processamento_1;
+    res2 = await processamento_2;
+    ...
+  }*/
 });

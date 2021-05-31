@@ -17,6 +17,7 @@ function showMsg($msg) {
 $(document).ready(function() {
     $("#btnView").click(function() {
         let $promise = new Promise(function(resolve, reject){
+            //setTimeout(funcao, 1000, param1, param2, ...);
             setTimeout(function() {
                 $("body").append($("<p>Fim do timer!</p>"));
                 resolve('SUCESSO!');

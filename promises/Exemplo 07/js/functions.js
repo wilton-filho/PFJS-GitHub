@@ -1,7 +1,7 @@
 const jsonFile = "json/users.json";
 
 // 1ª Opção: Usando async e await
-async function readUsers() {
+/*async function readUsers() {
   var file = await fetch(jsonFile);
   var contents = await file.json();
   
@@ -9,10 +9,10 @@ async function readUsers() {
     $("#usersList").append($("<li></li>").text($user.name));
   });
 }
-readUsers();
+readUsers();*/
 
 // 2ª Opção: Usando async e await
-/*function readUsers() {
+function readUsers() {
   fetch(jsonFile)
     .then(file => file.json())
     .then(contents => {
@@ -22,4 +22,4 @@ readUsers();
     })
     .catch(err => console.log(err));
 }
-readUsers();*/
+readUsers();
