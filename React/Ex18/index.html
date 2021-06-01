@@ -15,21 +15,23 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        class Login extends React.Component {
+        class Double extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {value: 0};
+            }
+            update = (event) => this.setState({value: event.target.value});
             render() {
                 return (
-                    <div>
-                        <h1>Login</h1>
-                        <form>
-                            <input type="text" placeholder="Usuário"/><br/>
-                            <input type="text" placeholder="Senha"/><br/>
-                            <button>Entrar</button>
-                        </form>
-                    </div>
+                    <form>
+                        <p>Digite um valor:</p>
+                        <p>Dobro do valor: {this.state.value * 2}</p>
+                        <input type="text" onChange={this.update}/>
+                    </form>  
                 );
             }
         }
-        ReactDOM.render(<Login/>, document.getElementById("root"));
+        ReactDOM.render(<Double/>, document.getElementById("root"));
     </script>
 </body>
 

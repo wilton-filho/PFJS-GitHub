@@ -15,21 +15,23 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        class Login extends React.Component {
+        //Opção 1: Usando funcao declarativa
+        class HelloWorld extends React.Component {
+            showMsg() {alert("Hello, World!");}
             render() {
-                return (
-                    <div>
-                        <h1>Login</h1>
-                        <form>
-                            <input type="text" placeholder="Usuário"/><br/>
-                            <input type="text" placeholder="Senha"/><br/>
-                            <button>Entrar</button>
-                        </form>
-                    </div>
-                );
+                return <button onClick={this.showMsg}>Hello, World!</button>;
             }
         }
-        ReactDOM.render(<Login/>, document.getElementById("root"));
+        ReactDOM.render(<HelloWorld/>, document.getElementById("root"));
+
+        //Opção 2: Usando arrow function
+        /*class HelloWorld extends React.Component {
+            showMsg = () => alert("Hello, World!");
+            render() {
+                return <button onClick={this.showMsg}>Hello, World!</button>;
+            }
+        }
+        ReactDOM.render(<HelloWorld/>, document.getElementById("root"));*/
     </script>
 </body>
 
