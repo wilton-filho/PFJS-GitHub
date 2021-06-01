@@ -26,7 +26,7 @@
                 fetch('json/ranking.json')
                     .then(file => file.json())
                     .then(contents => {
-                        contents.users.map((user, i) => {
+                        contents.users.forEach((user,i) => {
                             vetUsers[i] = {username:user.username, score:user.score};
                         });
                         this.setState({usuarios: vetUsers});
