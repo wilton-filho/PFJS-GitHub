@@ -14,28 +14,14 @@
 
 <body>
     <div id="root"></div>
-    <script type="text/babel" src="js/Counter.js">
-        class Counter extends React.Component {
-            constructor(props){
-                super(props);
-                this.state = {count: 10};
-            }
-            componentDidMount(){
-                this.timeID = setInterval(()=>this.refreshCounter(), 1000);
-            }
-            refreshCounter(){
-                if (this.state.count > 0) this.setState({count: this.state.count-1});
-                else clearInterval(this.timeID);
-            }
-            componentWillUnmount(){
-                clearInterval(this.timeID);
-            }
-            render(){
-                if (this.state.count > 3) return <p>Contador: {this.state.count}</p>
-                else return <p className="alert">Contador: {this.state.count}</p>
+    <script type="text/babel">
+        class HelloWorld extends React.Component {
+            showMsg = () => alert("Hello, World!");
+            render() {
+                return <button onClick={this.showMsg}>Hello, World!</button>;
             }
         }
-        ReactDOM.render(<Counter/>, document.getElementById("root"));
+        ReactDOM.render(<HelloWorld/>, document.getElementById("root"));
     </script>
 </body>
 
