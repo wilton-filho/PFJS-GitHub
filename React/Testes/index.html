@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,72 @@
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
+
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        function ShowName(props) {
-            return <h1>Wilton Filho</h1>;
+        // Passo 1: Usar classe ao invés de função (foi adicionado o método render())
+        /*class Time extends React.Component {
+            render() {
+                return <p>Hora atual: {this.props.date.toLocaleTimeString()}</p>
+            }
         }
-        ReactDOM.render(<ShowName/>, document.getElementById("root"));
+        function RealTime() {
+            const element = <Time date={new Date()}/>
+            ReactDOM.render(element, document.getElementById("root"));
+        }
+        setInterval(RealTime, 1000);*/
+
+        // Passo 2: 
+        class Time extends React.Component {
+            // 1º a ser executado
+            constructor(props){
+                super(props);
+                this.state = {data: new Date()};
+            }
+            // 2º a ser executado
+            render() {
+                return <p>{this.state.data.toLocaleTimeString()}</p>
+            }
+            // 3º a ser executado
+            componentDidMount() {
+               this.idTimer = setInterval(()=>this.setState({data: new Date()}),1000);
+            }
+            // Último método a ser executado desse componente
+            componentWillUnmount() {
+                clearInterval(this.idTimer);
+            }
+        }
+        
+        ReactDOM.render(<Time/>, document.getElementById("root"));
+
+
+
+
+
+
+
+
+
+        /*class Time extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { date: new Date() };
+            }
+            componentDidMount() {
+                this.timerID = setInterval(() => this.setState({ date: new Date() }), 1000);
+            }
+            componentWillUnmount() {
+                clearInterval(this.timerID);
+            }
+            render() {
+                return <p>Hora atual: {this.state.date.toLocaleTimeString()}</p>;
+            }
+        }
+        ReactDOM.render(<Time />, document.getElementById("root"));*/
+
+
     </script>
 </body>
+
 </html>
