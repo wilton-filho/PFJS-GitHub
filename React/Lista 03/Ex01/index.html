@@ -22,9 +22,9 @@
             }
             update = (event) => {
                 event.preventDefault();
-                if (event.target.name=="txtUsername") this.setState({username:event.target.value});
-                if (event.target.name=="txtPassword") this.setState({password:event.target.value});
-                console.log(this.state);
+                let name = event.target.name;
+                let value = event.target.value;
+                this.setState({[name]: value});
             }
             validate = () => {
                 (this.state.username && this.state.password)?alert("Login válido!"):alert("Login inválido");
@@ -34,9 +34,9 @@
                     <div>
                         <h1>Login</h1>
                         <form>
-                            <input type="text" name="txtUsername" placeholder="Usuário" onChange={this.update}/><br/>
-                            <input type="password" name="txtPassword" placeholder="Senha" onChange={this.update}/><br/>
-                            <button onClick={()=>this.validate()}>Entrar</button>
+                            <input type="text" name="username" placeholder="Usuário" onChange={this.update}/><br/>
+                            <input type="password" name="password" placeholder="Senha" onChange={this.update}/><br/>
+                            <button onClick={this.validate}>Entrar</button>
                         </form>
                     </div>
                 );
