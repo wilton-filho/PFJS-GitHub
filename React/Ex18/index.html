@@ -23,11 +23,13 @@
             update = (event) => this.setState({value: event.target.value});
             render() {
                 return (
-                    <form>
+                    <div>
                         <p>Digite um valor:</p>
                         <p>Dobro do valor: {this.state.value * 2}</p>
-                        <input type="text" onChange={this.update}/>
-                    </form>  
+                        <form>
+                            <input type="text" onChange={this.update}/>
+                        </form>  
+                    </div>
                 );
             }
         }

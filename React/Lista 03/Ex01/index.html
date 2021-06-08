@@ -22,7 +22,7 @@
             }
             update = (event) => {
                 event.preventDefault();
-                if (event.target.name=="txtUsername")  this.setState({username:event.target.value});
+                if (event.target.name=="txtUsername") this.setState({username:event.target.value});
                 if (event.target.name=="txtPassword") this.setState({password:event.target.value});
                 console.log(this.state);
             }
@@ -39,7 +39,7 @@
                             <button onClick={()=>this.validate()}>Entrar</button>
                         </form>
                     </div>
-                );    
+                );
             }
         }
         ReactDOM.render(<Login/>, document.getElementById("root"));
