@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Login extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value_1:0, value_2:0, result:0};
+            }
+
+            update = (event) => this.setState({[event.target.name]: parseFloat(event.target.value)});
+            
+            calc = (event) => {
+                event.preventDefault();
+                this.setState({result: eval(this.state.value_1 + event.target.name + this.state.value_2)});
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>Calculadora</h1>
+                        <form>
+                            <input type="text" name="value_1" placeholder="Valor 1" onChange={this.update}/><br/>
+                            <input type="text" name="value_2" placeholder="Valor 2" onChange={this.update}/><br/>
+                            <button name="+" onClick={this.calc}> + </button>
+                            <button name="-" onClick={this.calc}> - </button>
+                            <button name="*" onClick={this.calc}> * </button>
+                            <button name="/" onClick={this.calc}> / </button><br/>
+                            <input type="text" name="result" value={this.state.result} placeholder="Resultado" /><br/>
+                        </form>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<Login/>, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
