@@ -25,7 +25,7 @@
             
             calc = (event) => {
                 event.preventDefault();
-                this.setState({result: this.state.value_1 + this.state.value_2});
+                this.setState({result: eval(this.state.value_1 + event.target.name + this.state.value_2)});
             }
 
             render() {
@@ -35,7 +35,10 @@
                         <form>
                             <input type="text" name="value_1" placeholder="Valor 1" onChange={this.update}/><br/>
                             <input type="text" name="value_2" placeholder="Valor 2" onChange={this.update}/><br/>
-                            <button onClick={this.calc}> Somar </button><br/>
+                            <button name="+" onClick={this.calc}> + </button>
+                            <button name="-" onClick={this.calc}> - </button>
+                            <button name="*" onClick={this.calc}> * </button>
+                            <button name="/" onClick={this.calc}> / </button><br/>
                             <input type="text" name="result" value={this.state.result} placeholder="Resultado" /><br/>
                         </form>
                     </div>
