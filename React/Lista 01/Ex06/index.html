@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            background-color:pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        let name = prompt('Qual o seu PRIMEIRO nome?');
+        let width = parseInt(prompt('Qual a LARGURA da caixa (0 a 400)'));
+        let height = prompt('Qual a ALTURA da caixa (0 a 400)');
+
+        function ResizeBox(props) {
+            const element = (
+                <div className="box" style={{width:props.boxWidth+"px",height:props.boxHeight+"px"}}>
+                    <p>Olá, {props.username}!</p>
+                </div>
+            );
+            return element;
+        }
+        const element = <ResizeBox username={name} boxWidth={width} boxHeight={height}/>
+        ReactDOM.render(element, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
