@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>Document</title>
+    <title>Double</title>
 </head>
 
 <body>
@@ -25,10 +25,10 @@
                 return (
                     <div>
                         <p>Digite um valor:</p>
-                        <p>Dobro do valor: {this.state.value * 2}</p>
                         <form>
                             <input type="text" onChange={this.update}/>
                         </form>  
+                        <p>O dobro do valor acima = {this.state.value * 2}</p>
                     </div>
                 );
             }

@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>Document</title>
+    <title>Double</title>
 </head>
 
 <body>
@@ -18,15 +18,19 @@
         class Double extends React.Component {
             constructor(props){
                 super(props);
-                this.state = {value: 0};
+                this.state = {value: 0, doubleValue:""};
             }
-            update = (event) => this.setState({value: event.target.value});
-            showDouble = () => this.setState({value: this.state.value * 2});
+            update = (event) => this.setState({value: event.target.value, doubleValue: ""});
+            showDouble = () => {
+                event.preventDefault();
+                if ((!this.state.value) || isNaN(this.state.value)) alert("Informe um valor!");
+                else this.setState({doubleValue: this.state.value * 2});
+            }
             render() {
                 return (
                     <div>
                         <p>Digite um valor:</p>
-                        <p>Dobro do valor: {this.state.value}</p>
+                        <p>Dobro do valor: {this.state.doubleValue}</p>
                         <form>
                             <input type="text" onChange={this.update}/>
                             <button onClick={this.showDouble}>Ver o dobro</button>
