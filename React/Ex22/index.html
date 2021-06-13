@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Show Msgs</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class LuckMsg extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    selfEsteem: ["Seja feliz!","Você é um vencedor!","Nunca desiste dos seus sonhos"],
+                    investor: ["Compre boas ações a bons preços!", "Não venda na baixa, tenha paciência!","Invista em setores perenes!"],
+                    astrology: ["Siga o seu instinto!","Reverncie o sol com as suas orações!","Deixe que a lua refrigere os seus pensamentos"],
+                    category: {selfEsteem: "Auto-estima", investor: "Investimentos", astrology: "Astrologia"}
+                }
+            }
+            render() {
+                let msgs = this.state[this.props.typeMsg];
+                let msg = msgs[Math.floor(Math.random()*msgs.length)];
+                return (
+                    <p>Mensagem de [{this.state.category[this.props.typeMsg].toUpperCase()}] do dia: {msg}</p>
+                );
+            }
+        }
+        class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <LuckMsg typeMsg="selfEsteem"/><hr/>
+                        <LuckMsg typeMsg="investor"/><hr/>
+                        <LuckMsg typeMsg="astrology"/><hr/>
+                    </div>
+                );
+            }
+        }
+        ReactDOM.render(<App/>, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
