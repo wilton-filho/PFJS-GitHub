@@ -7,24 +7,25 @@
     <title>Document</title>
     <script>
         // Função declarativa;
-        function detectar() {
+        /*function detectar() {
             x = prompt("Digite um valor:");
             if (x % 2 == 0)
                 alert("Par");
             else alert("Ímpar");
         }
         detectar();
+        */
 
         // Função anônima
-        detectar = function () {
+        /*detectar = function () {
             x = prompt("Digite um valor:");
             (x % 2 == 0)?alert("Par"):alert("Ímpar");
         }
         detectar();
+        */
 
         // Arrow Function
         detectar = () => (prompt("Digite um valor:") % 2 == 0)?alert("Par"):alert("Ímpar");
-        
         detectar();
     </script>
 </head>
