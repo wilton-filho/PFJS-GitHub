@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tools.js"></script>
+  <script src="js/proc.js"></script>
+</head>
+
+<body>
+  <p>Selecione o nível de dificuldade para visualizar o ranking</p>
+
+  <select id="level">
+    <option value="easy">Fácil</option>
+    <option value="medium">Médio</option>
+    <option value="hard">Difícil</option>
+  </select>
+  
+  <button onclick="showRanking()">Visualizar</button>
+  
+  <table id="tabUsers">
+    <tr>
+      <th>Nome</th>
+      <th>Nível</th>
+      <th>Pontuação</th>
+    </tr>
+  </table>
+</body>
+
+</html>

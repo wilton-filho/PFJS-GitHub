@@ -1,0 +1,10 @@
+{
+    "users":[
+        {"name":"Ana","level":"easy","score":"10"},
+        {"name":"José","level":"medium","score":"15"},
+        {"name":"Maria","level":"hard","score":"30"},
+        {"name":"Pedro","level":"medium","score":"20"},
+        {"name":"Joane","level":"easy","score":"20"},
+        {"name":"gabriel","level":"hard","score":"50"}
+    ]
+}
