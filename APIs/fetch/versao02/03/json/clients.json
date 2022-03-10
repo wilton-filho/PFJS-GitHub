@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "name": "Wilton Filho", "age": "41" },
+    { "name": "Maria José", "age": "18" },
+    { "name": "João Pedro", "age": "33" }
+  ]
+}

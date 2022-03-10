@@ -1,0 +1,9 @@
+.invisivel {
+  display: none;
+}
+.visivel {
+  display: inline;
+}
+table, th, td {
+  border: 1px solid black;
+}

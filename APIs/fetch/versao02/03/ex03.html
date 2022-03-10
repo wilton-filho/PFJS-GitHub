@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/functions.js"></script>
+</head>
+<body>
+    <p>Clique no botão abaixo para ver os dados dos clientes:</p>
+    <button onclick="getClients('json/clients.json')">Clique</button>
+    <img src="img/load.gif" id="imgLoad" alt="Imagem de um círculo rodando" class="invisivel">
+    <table id="tabClients">
+        <th>Nome</th>
+        <th>Idade</th>
+    </table>
+</body>
+</html>
