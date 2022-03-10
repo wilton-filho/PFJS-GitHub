@@ -11,7 +11,7 @@
         async function getText(file) {
           let arquivo = await fetch(file);
           let user = await arquivo.json();
-          console.log(user.nome);
+          document.write(user.nome);
         }
         </script>
 </head>
