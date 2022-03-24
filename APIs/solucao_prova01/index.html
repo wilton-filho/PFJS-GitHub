@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/functions.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Promoções</title>
+</head>
+
+<body>
+
+    Tipo de produto
+    <select id="listProducts" onchange="readSelect()">
+        <option>Selecione</option>
+        <option>Smartphones</option>
+        <option>Geladeiras</option>
+    </select>
+
+    <div id="panelProducts" class="invisivel">
+        <h1>Promoção do dia</h1>
+        <h2 id="marca">Marca</h2>
+        <p id="modelo">Modelo</p>
+        <p id="preco">Preço</p>
+        <img src="" id="fotoProduto" alt="" width="200">
+    </div>
+</body>
+
+</html>
