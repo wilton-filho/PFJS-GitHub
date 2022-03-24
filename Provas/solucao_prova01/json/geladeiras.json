@@ -1,0 +1,22 @@
+{
+  "itens": [
+    {
+      "marca": "Brastemp",
+      "modelo": "Geladeira Frost Free Duplex",
+      "preco": "2.997,00",
+      "foto": "../img/geladeiras/geladeira01.jpg"
+    },
+    {
+      "marca": "Electrolux",
+      "modelo": "Geladeira DC35A",
+      "preco": "2.159,00",
+      "foto": "../img/geladeiras/geladeira02.jpg"
+    },
+    {
+      "marca": "Consul",
+      "modelo": "Geladeira DC35A",
+      "preco": "2.499,00",
+      "foto": "../img/geladeiras/geladeira03.jpg"
+    }
+  ]
+}

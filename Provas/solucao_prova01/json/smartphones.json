@@ -1,0 +1,22 @@
+{
+  "itens": [
+    {
+      "marca": "Samsung",
+      "modelo": "Smartphone S12",
+      "preco": "5.000,00",
+      "foto": "../img/celulares/celular01.jpg"
+    },
+    {
+      "marca": "Motorola",
+      "modelo": "Smartphone Moto G20",
+      "preco": "1.300,00",
+      "foto": "../img/celulares/celular02.jpg"
+    },
+    {
+      "marca": "Apple",
+      "modelo": "Smartphone Iphone 12",
+      "preco": "4.309,00",
+      "foto": "../img/celulares/celular03.jpg"
+    }
+  ]
+}
