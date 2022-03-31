@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*vet = [1,2,3,4,5];
+        function imprimir(vet) {
+            for (i=0; i<vet.length; i++) {
+                document.write(`${vet[i]} ->`);
+            }
+        }
+        imprimir(vet);*/
+
+        /*vet = [1,2,3,4,5,6,7,8,9,10];
+        vet.forEach(valor => document.write(valor));*/
+
+        /*total = prompt("Informe o nro de pessoas: ");
+        pessoas = [];
+        for (i=0; i<total; i++)
+            pessoas.push(prompt(`Nome da pessoa ${i+1}:`));
+
+        //pessoas.forEach(nome => document.write(`${nome}`));
+        pessoas.forEach(imprimir);
+
+        function imprimir(elemento, i) {
+            document.write(`Pessoa na posição ${i}: ${elemento}`);
+        }*/
+        /*vet = [1, 14, 17, 22, 34];
+        vet.forEach((valor, i) => {if (valor%2 != 0) document.write(`${i}`);});*/
+
+        nros = []
+        let n = prompt("Informe a quantidade de nros: ")
+        for (i = 0; i < n; i++) nros.push(prompt("Número " + (i + 1)));
+
+        nros = nros.map(
+            (elemento) => {
+            elemento = (elemento % 2 == 0)?elemento * 2:elemento * 3;
+            if (elemento >= 18) document.write
+            return elemento;
+        });
+        /*nros.forEach(nro => {
+            if (nro>=18) document.write(`${nro}`);
+        });*/
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
