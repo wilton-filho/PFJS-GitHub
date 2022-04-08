@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: yellow;
+            border:1px solid black;
+            position:absolute;
+        }
+    </style>
+</head>
+
+<body onload="setBox()">
+    <div id="root"></div>
+    <button onclick="drawBox()">Exibir caixa</button>
+    <script type="text/babel">
+
+        var box = {
+            name: "",
+            width: 0,
+            height: 0
+        }
+        
+        function setBox() {
+            box.name = prompt('Qual o seu PRIMEIRO nome?');
+            box.width = parseInt(prompt('Qual a LARGURA da caixa (0 a 400)'));
+            box.height = prompt('Qual a ALTURA da caixa (0 a 400)');
+        }
+
+        // https://www.delftstack.com/pt/howto/javascript/javascript-get-screen-size/
+        function Box(props) {
+            var topBox = parseInt(Math.random() * (document.documentElement.scrollHeight-props.height));
+            var leftBox = parseInt(Math.random() * (document.documentElement.scrollWidth-props.width));
+            return (
+                <div className="box" style={{width:props.width+"px", height:props.height+"px", top:topBox, left:leftBox}}>
+                    <p>{props.name}</p>
+                </div>
+            )
+        }
+
+        function drawBox() {
+            const element = <Box name={box.name} width={box.width} height={box.height}/>;
+            ReactDOM.render(element, document.getElementById("root"));
+        }
+
+    </script>
+</body>
+
+</html>
