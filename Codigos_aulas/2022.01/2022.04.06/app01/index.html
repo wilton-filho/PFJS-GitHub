@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!--Esse botao sera utilizado na primeira solução do exercicio 4-->
+    <!--<button onclick="contador()">Incrementar</button>-->
+    <!--O botao abaixo sera utilizado para a solução 5-->
+    <!--<button onclick="playCounter()">Incrementar</button>-->
+
+    <script type="text/babel">
+        // Solução do exercício 01
+        // -----------------------
+        /*function HelloWorld() {
+            return <p>Hello, World!</p>;
+        }
+        ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+        */
+
+        // Solução do exercício 02
+        // -----------------------
+        /*function Timer() {
+            var data = new Date();
+            return <p>{data.toLocaleTimeString()}</p>;
+        }
+        ReactDOM.render(<Timer/>, document.getElementById("root"));
+        */
+
+        // Solução do exercício 03
+        // -----------------------
+        /*function Timer() {
+            var data = new Date();
+            return <p>{data.toLocaleTimeString()}</p>;
+        }
+        function playTimer() {
+            ReactDOM.render(<Timer/>, document.getElementById("root"));
+        }
+        setInterval(playTimer, 1000);
+        */
+
+        // Primeira solução do exercício 04
+        // --------------------------------
+        /*var i = 0;
+        function Counter() {
+            return <p> Contador = {i++}</p>;
+        }
+        function contador() {
+            ReactDOM.render(<Counter />, document.getElementById("root"));
+        }*/
+
+        // Segunda solução do exercício 04
+        // --------------------------------
+        /*var i = 0;
+        function Counter() {
+            return (
+                <div>
+                    <p> Contador = {i++}</p>
+                    <button onClick={playContador}>Incrementar</button>
+                </div>
+            );
+        }
+        function playContador() {
+            ReactDOM.render(<Counter />, document.getElementById("root"));
+        }
+        playContador();*/
+
+        // Solução do exercício 05
+        // -----------------------
+        //<button onclick="playCounter()">Incrementar</button>
+        /*var i = 0;
+        function Counter() {
+            return <p> Contador = {i++}</p>;
+        }
+        function playContador() {
+            ReactDOM.render(<Counter />, document.getElementById("root"));
+        }
+        function playCounter() {
+            setInterval(playContador, 1000);
+        }
+        playContador();*/
+
+        // Solução do exercício 06
+        // -----------------------
+        var box = {
+            nome: "",
+            largura: 0,
+            altura: 0
+        }
+        function setBox(name, height, width) {
+            box.nome = name;
+            box.largura = height;
+            box.altura = width;
+        }
+        function getNome() {
+            return box.nome;
+        }
+        function getAltura() {
+            return box.altura;
+        }
+        function getLargura() {
+            return box.largura;
+        }
+        function readBox() {
+            var nome = prompt("Informe o seu nome:");
+            var largura = prompt("Informe a largura da caixa:");
+            var altura = prompt("Informe a altura da caixa:");
+            setBox(nome, largura, altura);
+            ReactDOM.render(<Box name={getNome()} height={getAltura()} width={getLargura()} />, document.getElementById("root"));
+        }
+        function Box(props) {
+            return <div className="box" style={{ width: props.width + "px", height: props.height + "px" }}>{props.name}</div>;
+        }
+        readBox();
+
+    </script>
+</body>
+
+</html>
