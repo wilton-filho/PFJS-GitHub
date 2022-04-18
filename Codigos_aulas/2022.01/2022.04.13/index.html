@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+    <style>
+        .alerta {
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        // Ex 1: Criação de um componente para exibir um Hello <nome>!
+        //----------------------------------------------------------------------------------
+        /*class Welcome extends React.Component {
+            render() {
+                return <p>Hello, {this.props.nome}</p>
+            }
+        }
+        ReactDOM.render(<Welcome nome="Wilton"/>, document.getElementById("root"));
+        */
+
+        // Ex 2: Atualização de props (apenas leitura dentro da classe)
+        //----------------------------------------------------------------------------------
+        /*class Welcome extends React.Component {
+            render() {
+                // this.props é apenas leitura
+                // this.props.nome = this.props.nome + " Filho";
+                return <p>Hello, {this.props.nome}</p>
+            }
+        }
+        ReactDOM.render(<Welcome nome="Wilton"/>, document.getElementById("root"));
+        */
+
+        // Ex 3: Criar um componente para exibir um relógio ESTÁTICO na interface
+        //----------------------------------------------------------------------------------
+        /*class Timer extends React.Component {
+            render() {
+                return <p>Hora atual: {this.props.data.toLocaleTimeString()}</p>
+            }
+        }
+        ReactDOM.render(<Timer data={new Date()}/>,document.getElementById("root"));*/
+
+        // Ex 3: Criar um componente para exibir um relógio DINÂMICO na interface
+        //----------------------------------------------------------------------------------
+        /*class Timer extends React.Component {
+            render() {
+                return <p>Hora atual: {this.props.data.toLocaleTimeString()}</p>
+            }
+        }
+        function play() {
+            ReactDOM.render(<Timer data={new Date()}/>,document.getElementById("root"));
+        }
+        setInterval(play, 1000);
+        */
+        
+        //ENCAPSULADO / MANUTENCAO / REAPROVEITAMENTO DE CÓDIGO
+        // Ex 4: Como encapsular o componente Timer de forma estática, usando classe?
+        //----------------------------------------------------------------------------------
+        /*class Timer extends React.Component {
+            constructor(props) { // 1º método a ser executado
+                super(props);
+                this.state = {
+                    horaAtual: new Date()
+                };
+            }
+            render() {          // 2º método a ser executado: render()
+                return <p>Hora atual: {this.state.horaAtual.toLocaleTimeString()}</p>
+            }
+        }
+        ReactDOM.render(<Timer/>,document.getElementById("root"));*/
+
+        // Ex 5: Como encapsular o componente Timer de forma dinâmica, usando classe?
+        //----------------------------------------------------------------------------------
+        /*class Timer extends React.Component {
+            constructor(props) {  // 1º método a ser executado
+                super(props);
+                this.state = {
+                    horaAtual: new Date()
+                };
+            }
+            render() {            // 2º método a ser executado: render()
+                return <p>Hora atual: {this.state.horaAtual.toLocaleTimeString()}</p>
+            }
+            componentDidMount() { // 3º método a ser executado
+                this.timeID = setInterval(()=>this.atualizarHora(), 1000);
+            }
+            componentWillUnmount() { // Método a ser executado qdo o componente for finalizado/removido
+                clearInterval(this.timeID);
+            }
+            atualizarHora() {
+                this.setState({horaAtual: new Date()});
+            }
+        }
+        ReactDOM.render(<Timer/>,document.getElementById("root"));
+        */
+
+        // Ex 6: Contador regressivo com mensagem de alerta (cor vermelho)
+        //----------------------------------------------------------------------------------
+        class Contador extends React.Component {
+            constructor(props) {  //1º método a ser executado
+                super(props);
+                this.state = {
+                    cont: 10,
+                    corte: 5
+                }
+            }
+            render() {            // 2º método a ser executado
+                var nomeClasse = "alerta";
+                if (this.state.cont > this.state.corte) return <p>Contador: {this.state.cont}</p>
+                else return <p className={nomeClasse}>Contador: {this.state.cont}</p>
+            }
+            componentDidMount() { // 3º método a ser executado
+                this.timeID = setInterval(()=>this.decrementarCont(), 1000);
+            }
+            decrementarCont() {
+                if (this.state.cont > 0) this.setState({cont:this.state.cont-1});
+                else clearInterval(this.timeID);
+            }
+        }
+        ReactDOM.render(<Contador/>,document.getElementById("root"));
+        
+
+        /*class ShowFullName extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    nome:"Wilton",
+                    sobrenome:"Filho"
+                }
+            }
+            render() {
+                return <p>{this.state.nome} {this.state.sobrenome}</p>
+            }
+        }*/
+
+        // Resolver a lista 02 de exercícios sobre REACT
+    </script>
+</body>
+
+</html>
