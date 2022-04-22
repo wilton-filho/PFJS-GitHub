@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Ranking extends React.Component {
+            constructor(props) { // 1ª a ser executado
+                super(props);
+                this.state = { jogadores: [], file: "users.json" }
+            }
+            render() {          // 2ª a ser executado
+                return (
+                    <table>
+                        {this.state.jogadores.map(user => <tr><td>{user.nome}</td><td>{user.pontuacao}</td></tr>)}
+                    </table>
+                );
+            }
+            componentDidMount() {// 3ª a ser executado
+                // Ler o arquivo JSON e descarregar o conteudo dele no vetor jogadores   
+                fetch(this.state.file)
+                    .then(file => file.json())
+                    .then(content => { this.setState({ jogadores: content.users }) })
+                    .catch(err => console.log(err));
+            }
+        }
+        //content.users.forEach(user => console.log(user.nome))
+        ReactDOM.render(<Ranking />, document.getElementById("root"));
+    </script>
+</body>
