@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Jogo extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    nroSorteado: Math.floor(Math.random() * 10) + 1,
+                    nroUser: -1
+                }
+            }
+            render() {
+                return (
+                    <div>
+                        <p>Informe um número aleatório entre 1 e 10</p>
+                        <form>
+                            <input type="text" name="nroSorteado" onChange={this.getNumber}/>
+                            <input type="button" value="Conferir" onClick={this.validar}/>
+                        </form>
+                    </div>
+                )
+            }
+            getNumber = (event) => {
+                event.preventDefault();
+                this.setState({nroUser:event.target.value});
+            }
+            validar = () => {
+                if (this.state.nroSorteado == this.state.nroUser) alert("Parabéns. CERTA RESPOSTA!");
+                else if (this.state.nroUser > this.state.nroSorteado) alert("Você errou. Tente um número MENOR!");
+                else alert("Você errou. Tente um número MAIOR!");
+            }
+        }
+        ReactDOM.render(<Jogo/>, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
