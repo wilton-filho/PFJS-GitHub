@@ -1,0 +1,14 @@
+.mainHome {
+    background-color: pink;
+}
+.mainSobreNos {
+    background-color: yellow;
+}
+.mainContatos {
+    background-color: lightblue;
+}
+a:link, a:visited {
+    font-weight: bold;
+    text-transform: uppercase;
+    color:blue;
+}
