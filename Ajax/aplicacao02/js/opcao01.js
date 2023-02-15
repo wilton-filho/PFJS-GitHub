@@ -1,3 +1,5 @@
+// Opção 1: A partir da criação de um objeto XMLHttpRequest
+
 function getCustomersOp1() {
     let xhttp = new XMLHttpRequest();
     let file = "https://wilton-filho.github.io/PFJS-GitHub/Ajax/aplicacao02/json/clientes.json";
