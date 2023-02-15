@@ -1,4 +1,4 @@
-// Opção 1: Criação de um objeto XMLHttpRequest (o XMLHttpRequest é o objeto central que permite a comunicação entre a página web e o servidor)
+// Opção 1: A partir da criação de um objeto XMLHttpRequest
 
 function getTxtOp01() {
     let xhttp = new XMLHttpRequest();
