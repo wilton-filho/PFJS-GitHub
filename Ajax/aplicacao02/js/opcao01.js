@@ -4,7 +4,7 @@ function getCustomersOp1() {
 
     xhttp.onreadystatechange = function () {
         if ((this.readyState == 4) && (this.status == 200)) {
-            printCustomers(this.responseText);
+            printCustomers(JSON.parse(this.responseText));
         }
     }
 

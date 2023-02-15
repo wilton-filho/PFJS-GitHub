@@ -4,8 +4,6 @@ function printCustomers(clientes) {
     let tdNome = document.createElement("td");
     let tdIdade = document.createElement("td");
 
-    clientes = JSON.parse(clientes);
-  
     nome = document.createTextNode(clientes.nome);
     idade = document.createTextNode(clientes.idade);
     tdNome.appendChild(nome);
