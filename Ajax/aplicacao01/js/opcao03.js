@@ -3,7 +3,7 @@
 function getTxtOp03() {
     axios.get('bd.txt')
         .then(response => {
-            cdocument.getElementById("txtMsg").innerHTML = response.data + " (opção 03)"
+            document.getElementById("txtMsg").innerHTML = response.data + " (opção 03)"
         })
         .catch(error => {
             console.log(error);
