@@ -3,7 +3,7 @@ function printCustomers(data) {
     let sexType = document.getElementById("sexList");
 
     //Apagar linhas da tabela primeiro
-    document.querySelectorAll("table tbody tr").forEach(function(linha){linha.remove()})
+    clearTable();
 
     data.clientes.forEach(elemento => {
         if ((elemento.sexo == sexType.value) || (sexType.selectedIndex == 0)) {
@@ -19,4 +19,9 @@ function printCustomers(data) {
             tab.appendChild(line);
         }
     });
+}
+
+function clearTable() {
+    var tabela = document.getElementById("customersTab");
+    while (tabela.rows.length > 1) tabela.deleteRow(1);
 }

@@ -11,12 +11,11 @@
 <body>
     <form>
         <label>Sexo:</label>
-        <select id="sexList">
+        <select id="sexList" onchange="loadCustomers()">
             <option value="*">Todos os sexos</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
         </select>
-        <input type="button" value="Carregar clientes" onclick="loadCustomers('sexList','customersTab')">
     </form>
     <p>Lista de clientes:</p>
     <table id="customersTab">
