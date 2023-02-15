@@ -2,6 +2,6 @@
 
 function getTxtOp03() {
     axios.get('bd.txt')
-        .then(response => document.getElementById("txtMsg").innerHTML = response.data + " (opção 03)")
+        .then(response => document.getElementById("txtMsg").innerHTML = response.data + " (Axios)")
         .catch(error => console.log(error));
 }
