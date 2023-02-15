@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Document</title>
-    <script src="js/functions.js?v=1"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/opcao01.js"></script>
+    <script src="js/opcao02.js"></script>
 </head>
 <body>
     <h1>Cliente cadastrado</h1>
     <p><b>Nota:</b> exibe o nome e idade do único cliente armazenado no arquivo JSON</p>
     <form action="">
-        <input type="button" value="Visualizar cliente" onclick="loadCustomers('tabCustomers')">
+        <input type="button" value="Visualizar cliente" onclick="getCustomersOp1()">
+        <input type="button" value="Visualizar cliente" onclick="getCustomersOp2()">
     </form>
     <table id="tabCustomers">
         <tr>
