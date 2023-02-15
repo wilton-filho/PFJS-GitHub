@@ -1,6 +1,6 @@
 // Opção 1: Criação de um objeto XMLHttpRequest (o XMLHttpRequest é o objeto central que permite a comunicação entre a página web e o servidor)
 
-function getTxt() {
+function getTxtOp01() {
     let xhttp = new XMLHttpRequest();
     let file = "bd.txt";
     xhttp.onreadystatechange = function () {
