@@ -1,0 +1,1 @@
+Objetivo: mostrar como criar um componente, usando notação de função, e importá-lo no arquivo "index.js"

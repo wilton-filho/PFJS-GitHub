@@ -1,0 +1,1 @@
+Objetivo: Componente com coleção de dados. Ler aquivo ".js" para exibir dados de comentarios em uma lista não ordenada usando o atributo "key" (atributo interno do React. Na inspeção de elemento ele não aparece).

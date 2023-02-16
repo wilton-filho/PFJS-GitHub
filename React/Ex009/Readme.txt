@@ -1,0 +1,1 @@
+Objetivo: mostrar uma forma mais simples de criar um componente (menos verbosa) e mostrar como usar comentário JSX

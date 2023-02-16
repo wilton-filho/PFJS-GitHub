@@ -1,0 +1,9 @@
+.boxProdutos {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+    .boxProdutos {
+        flex-direction: row;
+    }
+}

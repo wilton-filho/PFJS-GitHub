@@ -1,0 +1,1 @@
+Objetivo: Atualizar a aplicação do exemplo 006. Passar parâmetros para um componente via props, ou seja, a data de um comentário será passado por <Post/> => <Post data="10/06/22"/>

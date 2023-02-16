@@ -1,0 +1,15 @@
+.boxProduto {
+    border:1px solid black;
+    text-align: center;
+    padding:20px;
+}
+.boxProduto img {
+    width:150px;
+}
+.destaqueProduto {
+    background-color:orange;
+}
+.nomeProduto {
+    font-size:22px;
+    font-weight: bold;
+}

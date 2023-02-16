@@ -1,0 +1,1 @@
+Objetivo: Componente com coleção de dados. Ler aquivo .js para exibir dados de comentarios

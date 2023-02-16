@@ -1,0 +1,1 @@
+Objetivo: aumentar o nível de componentização
