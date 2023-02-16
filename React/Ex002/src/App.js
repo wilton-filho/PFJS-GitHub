@@ -1,28 +1,29 @@
-// Essa importação não é mais necessária a partir da versão 17 do React (Motivo: a conversão de código usando 
+import React from 'react';
+// O import acima pode ser suprimido. Isso ocorreu a partir da versão 17 do React (Motivo: a conversão de código usando 
 // a notação JSX para JS regular é feita pelo JSX Transform ao realizar create-react-app)
 // Fonte: https://pt-br.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-import React from 'react';
+
 
 // Há duas abordagens para criação de um componente: "function component" ou "class component"
-// Será utilizada a opção de "function component"
-// Além disso, está sendo utilizada a notação JSX para criação de um component
+// Utilizarei apenas a abordagem de "function component" (sugestão da documentação do REACT)
+// A notação JSX será utilizada para criação dos elementos
 
-// Exemplo 1: usando funcao declarativa para definição de um componente
-function App() {
+// Perceba que o export default foi colocado aqui (ao invés do final)
+export default function App() {
     return (
         <h1>Hello, World!</h1>
     );
 }
 
-// Exemplo 2: usando notacao arrow function para definição de um componente
-/*const App = () =>  {
+// A notacao arrow function tb poderia ser utilizada para definição de um componente
+/* export default const App = () =>  {
     return (
         <h1>Hello, World!!!</h1>
     );
 }*/
 
 // Exemplo 3: Necessidade de uma tag pai para encapsular filhos
-/*const App = () =>  {
+/*export default function App() {
     return (
         <div>
             <h1>Hello, World!</h1>
@@ -32,7 +33,7 @@ function App() {
 }*/
 
 // Exemplo 4: Pai com tag vazia
-/*const App = () =>  {
+/*export default function App() {
     return (
         <>
             <h1>Hello, World!</h1>
@@ -41,4 +42,3 @@ function App() {
     );
 }*/
 
-export default App;
