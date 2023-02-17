@@ -42,3 +42,10 @@ export default function App() {
     );
 }*/
 
+// Exemplo 5: Fechamento de tags com /. Ex: <br/>, <img/>, etc.
+/*export default function App() {
+    return (
+        <h1>Hello, <br/> World!</h1>
+    );
+}*/
+
