@@ -1,6 +1,6 @@
 import Post from './components/posts/Post';
 
-const App = () => {
+export default function App() {
     return (
         <>
             <Post/>
@@ -9,5 +9,3 @@ const App = () => {
         </>
     );
 }
-
-export default App;

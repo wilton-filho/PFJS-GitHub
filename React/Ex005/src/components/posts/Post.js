@@ -2,7 +2,7 @@ import Titulo from './Titulo';
 import Mensagem from './Mensagem';
 import Data from './DataPublicacao';
 
-const Post = () => {
+export default function Post() {
     return (
         <div className="post">
             <Titulo/>
@@ -11,5 +11,3 @@ const Post = () => {
         </div>
     );
 }
-
-export default Post;
