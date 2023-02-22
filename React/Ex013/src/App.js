@@ -1,15 +1,27 @@
-import Header from './components/Header';
-import Content from './components/Content';
-import HeaderCorreto from './components/HeaderCorreto';
-import ContentCorreto from './components/ContentCorreto';
+import Exemplo1 from './components/Exemplo1';
+import Exemplo2 from './components/Exemplo2';
+import Exemplo3 from './components/Exemplo3';
+import Exemplo4 from './components/Exemplo4';
+import Exemplo5 from './components/Exemplo5';
+import Exemplo6 from './components/Exemplo6';
+import Exemplo7 from './components/Exemplo7';
+import Exemplo8 from './components/Exemplo8';
+import Exemplo9 from './components/Exemplo9';
+
+import './index.css'
 
 const App = () => {
     return (
         <>
-            <Header/>
-            <Content/>
-            <HeaderCorreto/>
-            <ContentCorreto/>
+            {/* <Exemplo1/> */}
+            {/* <Exemplo2/> */}
+            {/* <Exemplo3/> */}
+            {/* <Exemplo4/> */}
+            {/* <Exemplo5/> */}
+            {/* <Exemplo6/> */}
+            {/* <Exemplo7/> */}
+            {/* <Exemplo8/> */}
+            <Exemplo9/>
         </>
     );
 }

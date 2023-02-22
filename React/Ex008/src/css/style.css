@@ -1,4 +1,4 @@
-h1 {
+.post h1 {
     color: red;
 }
 .post {
@@ -9,6 +9,6 @@ h1 {
     border: 2px solid black;
     border-radius: 10px;
 }
-.dataPublicacao {
+.data {
     text-align: right;
 }

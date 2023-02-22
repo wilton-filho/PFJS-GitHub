@@ -1,15 +1,16 @@
-import Teste from './components/Teste';
+import Post from './components/Post';
+import comentarios from './js/comentarios.js';
 
-const App = () => {
-    return (
-        <>
-            <Teste>
-                {/* A mensagem abaixo não irá aparecer se não for usado no componente {props.children}*/}
-                <p>Sou um filho do componente</p>
-                <p>Eu também!</p>
-            </Teste>
-        </>
-    );
+export default function App() {
+
+  return (
+    <>
+      {getPosts()} 
+    </>
+  );
+
+  function getPosts() {
+    return comentarios.map((comentario, index) => 
+        <Post key={index} titulo={comentario.titulo} data={comentario.data} msg={comentario.msg} autor={comentario.autor}/>)
+  }
 }
-
-export default App;

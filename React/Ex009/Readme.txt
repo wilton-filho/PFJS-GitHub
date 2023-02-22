@@ -1,1 +1,1 @@
-Objetivo: mostrar uma forma mais simples de criar um componente (menos verbosa) e mostrar como usar comentário JSX
+Objetivo: Componente com coleção de dados. Ler aquivo ".js" para exibir dados de comentarios em uma lista não ordenada usando o atributo "key" (atributo interno do React. Na inspeção de elemento ele não aparece).

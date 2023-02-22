@@ -1,1 +1,1 @@
-Objetivo: mostrar como renderizar a aplicação utilizando a versão 18 do REACT no index.js
+Objetivo: mostrar como usar CSS em projetos React

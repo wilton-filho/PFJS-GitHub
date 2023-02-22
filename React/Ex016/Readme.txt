@@ -1,1 +1,0 @@
-Objetivo: mostrar como usar o Hook useEffect()

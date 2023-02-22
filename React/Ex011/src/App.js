@@ -1,9 +1,9 @@
-import Posts from './components/Posts';
+import BoxProdutos from './components/BoxProdutos';
 
 const App = () => {
     return (
         <>
-            <Posts/>
+            <BoxProdutos/>
         </>
     );
 }
