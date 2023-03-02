@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // OBJETIVO: Mostrar, a partir de exemplos, como utilizar métodos (forEach(), map(), filter(), etc.) para realizar a iteração sobre elementos de um vetor
+
+        vet = [5, 12, 18, 22, 9];
+
+        // Uso do forEach para imprimir todos os elementos de um vetor
+        vet.forEach(imprimir);
+        function imprimir(elemento) {
+            console.log(elemento);
+        }
+        // Forma mais simplificada de se escrever o código acima:
+        vet.forEach(elemento => console.log(elemento));
+
+
+        // Udo do forEach para imprimir idades>=18 armazenadas em um vetor
+        vet = [5, 12, 18, 22, 9];
+        vet.forEach(maiorIdade);
+        function maiorIdade(idade) {
+            if (idade >= 18) console.log(idade);
+        }
+        // Forma mais simplificada de se escrever o código acima:
+        vet.forEach(elemento => {if (elemento>=18) console.log(elemento)});
+
+
+        // Udo do forEach para imprimir idades>=18 e seus respectivos índices
+        vet = [5, 12, 18, 22, 9];
+        vet.forEach(maiorIdade);
+        function maiorIdade(idade, indice) {
+            if (idade >= 18) console.log(`[${indice}]: ${idade}`);
+        }
+        // Forma mais simplificada de se escrever o código acima:
+        vet.forEach(elemento => {if (elemento>=18) console.log(`[${indice}]: ${idade}`)});
+
+        // Uso do método map(): realiza uma operação sobre cada elemento do vetor e retorna um vetor atualizado
+        // Duplicar todos os valores armazenados em um vetor
+        vet2 = vet;
+        vet2 = vet2.map(elemento => elemento * 2);
+        console.log(vet2);
+        
+        // Uso do método filter(): filtra os elementos a partir de um condição e retorna um vetor com os elementos que atendam aquela condição
+        // Exibir todos os elementos pares de um vetor
+        vet3 = vet;
+        vet3 = vet3.filter(elemento => elemento%2==0)
+        console.log(vet3);
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

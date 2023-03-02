@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // OBJETIVO: Mostrar os vários tipos de funções 
+
+        // Função declarativa para retornar a soma de dois valores passados como parâmetros
+        function somar(x, y) {
+            return x + y;
+        }
+        console.log(somar(10,20));
+
+        // Função literal
+        const s1 = function somar(x, y) {
+            return x + y;
+        }
+        console.log(s1(10,20));
+
+        // Função anonima (note que o nome da função foi removido)
+        const s2 = function (x, y) {
+            return x + y;
+        }
+        console.log(s2(10,20));
+
+        // Função arrow function (note que a palavra reserva function foi removida e foi adicionado a flecha)
+        const s3 = (x, y) => {
+            return x + y;
+        }
+        console.log(s3(10,20));
+        
+        // Versão compacta da solução da arrow function acima
+        const s4 = (x, y) => x + y;
+        console.log(s4(10,20));
+
+        // Exemplo: Arrow function para calcular o dobro de um valor
+        const dobro = x => x * 2;
+        console.log(dobro(4));
+        console.log(dobro(8));
+
+        // Ex. 1 da Lista 01
+        let vet1 = [10,20,30,40];
+        let vet2 = [1,2,3,4];
+
+        // Arrow function para somar os elementos de um vetor
+        const somar = (vet) => {
+            let soma = 0;
+            for (let i=0; i<vet.length; i++) {
+                soma = soma + vet[i];
+            }
+            return soma;
+        }
+
+        console.log(somar(vet1));
+        console.log(somar(vet2));
+
+        // Ex. 2(A) da Lista 01 (média das idades)
+        const media = vet => somar(vet)/vet.length;
+        console.log(media(vet2));
+
+        // Ex. 2(B) da Lista 01 (maior idade)
+        const maiorIdade = vet => {
+            let maxIdade = vet[0];
+            for (let i=1; i<vet.length; i++) 
+                if (vet[i] > maxIdade) maxIdade = vet[i];
+            return maxIdade;
+        }
+        console.log(maiorIdade(vet2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
