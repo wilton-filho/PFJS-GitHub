@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 1) Construa uma função em JavaScript para exibir apenas o primeiro e o último nome de cada uma das várias pessoas armazenadas em um vetor.
+        let nomes = ["Wilton de Paula Filho", "Maria Jose da Silva", "Ana Maria"];
+
+        const getFirstLastNames = (vet) => vet.map(elemento => {
+            let vetPalavras = elemento.split(" ")
+            return vetPalavras[0].concat(" ",vetPalavras[vetPalavras.length-1]); 
+        })
+
+        console.log(getFirstLastNames(nomes));
+
+        // 2) Construa uma função em JavaScript para somar os valores ímpares de determinado vetor.
+
+        let vet = [10,4,8,7,1,20];
+        let vet2 = [0, 41, 13, 7, 1, 20];
+
+        const somarImpares = (vet) => vet.filter(el => el%2==1).reduce((soma, el) => soma + el);
+
+        console.log(somarImpares(vet));
+        console.log(somarImpares(vet2));
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

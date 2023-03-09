@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let vet1 = [7, 10, 21, 30, 44];
+
+        //Dobrar os valores PARES do vetor (map:gera um novo vetor)
+        let vetDobroPares = [];
+        vetDobroPares = vet1.map(elemento => (elemento%2==0)?elemento*2:elemento)
+        console.log(vetDobroPares);
+
+        // Dobrar TODOS os valores de um vetor (map: gera um novo vetor)
+        vetNovo = vet1.map(elemento => elemento * 2) //[20, 42, ...]
+        console.log(vetNovo);
+
+        // Algumas abstrações (apenas para entender melhor o uso do map())
+        // lab6 = lab6.map(pc => instalarVSCODE(pc)) 
+        // lab6 = lab6.map(pc => (ligado(pc))?desligar(pc):pc)
+        // lab6 = lab6.filter(pc => defeito(pc))
+
+        // Retornar apenas os valores pares de um vetor
+        let vetSoPares = vet1.filter(elemento => elemento%2==0)
+        console.log(vetSoPares);
+
+        // Retorna os valores >= 18
+        let maiorIdade = vet1.filter(elemento => elemento>=18)
+        console.log(maiorIdade);
+
+        // Uso do metodo filter
+        console.log(vet1.filter(elemento => elemento%2==0));
+
+        let vet2 = [1, 2, 3, 4, 5];
+
+        // Funcao declarativa utilizando for
+        // function somar(vetor) {
+        //     let soma = 0;
+        //     for (i=0; i<vetor.length; i++) 
+        //         soma += vetor[i]
+        //     return soma;
+        // }
+
+        // Arrow function utilizando reduce()
+        let somarVet = (vet) => vet.reduce((soma, elemento) => elemento + soma)
+        console.log(`RESULTADO = ${somarVet(vet2)}`);
+        console.log(`RESULTADO = ${somarVet(vet1)}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
