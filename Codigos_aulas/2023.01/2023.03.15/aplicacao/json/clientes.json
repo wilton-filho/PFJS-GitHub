@@ -1,0 +1,7 @@
+{"clientes": [
+    {"nome": "Maria", "sexo": "F", "idade": "45"},
+    {"nome": "José", "sexo": "M", "idade": "33"},
+    {"nome": "Ana", "sexo": "F", "idade": "85"},
+    {"nome": "Antônio", "sexo": "M", "idade": "78"},
+    {"nome": "Carla", "sexo": "F", "idade": "14"}
+]}
