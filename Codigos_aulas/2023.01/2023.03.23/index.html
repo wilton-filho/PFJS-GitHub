@@ -1,0 +1,35 @@
+<!-- 
+    REFERÊNCIAS: 
+
+    SOURCE CODE:
+    https://www.youtube.com/watch?v=77NRC9kWk88
+    https://github.com/WilliamDosSantos/API_CHAT_GPT_JS
+    
+    API KEYS: https://platform.openai.com/account/api-keys
+    API REFERENCE COMPLETIONS: https://platform.openai.com/docs/api-reference/completions 
+
+    OBSERVAÇÃO:
+        - No arquivo "function.js" é necessário atribuir o número da KEY API do ChatGPT do programador. Essa key pode ser obtida a partir dos endereços acima.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Notifications API Example</title>
+    <script src="function.js" defer></script>
+</head>
+
+<body>
+    <form action="">
+        <h2>Faça uma pergunta ao CHATGPT:</h2>
+        <textarea name="" id="inputQuestion" style="width:100%" rows="20">Qual é a capital do Brasil?</textarea>
+
+        <input type="button" value="Enviar" onclick="SendQuestion()">
+
+        <h2>Resposta do CHATGPT:</h2>
+        <textarea name="" id="result" style="width:100%" rows="20"></textarea>
+    </form>   
+</body>
+
+</html>
