@@ -1,6 +1,11 @@
-// Adicionando estilos (CSS)
+import Paragrafo from './components/Paragrafo'
+import Mensagem from './components/Mensagem'
+
 export default function App() {
     return (
-        <h1 style={{color:'green', backgroundColor:"yellow"}}>Hello, World!</h1>
+        <>
+            <Paragrafo/>
+            <Mensagem/>
+        </>
     );
 }
