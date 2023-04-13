@@ -1,0 +1,8 @@
+.centralizar {
+    text-align: center;
+}
+.avalicaoCliente {
+    border:2px solid black;
+    width: 300px;
+    background-color: rgb(242, 242, 242);
+}
