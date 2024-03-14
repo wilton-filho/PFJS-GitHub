@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px
+}
+
+label {
+    display: block;
+}
+
+input[type="text"] {
+    padding: 5px;
+}
+
+body {
+    margin: 10px;
+}
