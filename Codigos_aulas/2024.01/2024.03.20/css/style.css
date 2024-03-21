@@ -1,0 +1,14 @@
+#boxFilmes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#boxFilmes div {
+    border:1px solid black;
+    padding:30px;
+}
+
+#boxFilmes div p {
+    font-size:30px;
+}
