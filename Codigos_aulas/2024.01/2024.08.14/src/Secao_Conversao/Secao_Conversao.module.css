@@ -1,0 +1,11 @@
+h2 {
+    color: red;
+}
+
+.secaoConversao {
+    text-align: center;
+}
+
+.secaoConversao form label {
+    display: block;
+}
