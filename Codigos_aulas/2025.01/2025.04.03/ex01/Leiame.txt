@@ -1,0 +1,31 @@
+Exportação padrão (export default):
+===============================
+
+Vantagens:
+- Permite escolher qualquer nome na importação:
+- Útil quando o módulo exporta apenas um valor (como um array, função ou classe principal).
+- É mais comum em bibliotecas e frameworks como React.
+
+Desvantagens:
+- Torna o código menos explícito, pois o nome pode mudar na importação.
+- Pode dificultar a refatoração, já que não há verificação automática de nomes.
+
+-------------------------
+
+Exportação nomeada (export {}):
+===============================
+Vantagens:
+- Melhor suporte à autocompletação e refatoração (os nomes são fixos).
+- Permite exportar vários valores no mesmo arquivo (Ex: export {nome1, nome2})
+
+Desvantagens:
+- Sempre precisa usar {} na importação.
+- Não permite renomear diretamente na importação (a menos que use as).
+
+--------------------------
+CONCLUSÃO:
+
+Melhor abordagem?
+- Se for um único valor/exportação principal → Use export default.
+- Se houver várias exportações no mesmo módulo → Use export {}.
+- Se precisar de clareza e manutenção fácil → Prefira export {}.
