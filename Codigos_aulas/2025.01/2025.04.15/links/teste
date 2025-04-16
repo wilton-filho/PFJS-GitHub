@@ -1,0 +1,8 @@
+<!-- Link absoluto -->
+<a href="http://www.google.com">Link</a>
+
+<!-- Link relativo -->
+<a href="pagina.html">Link</a>
+
+<!-- Âncora -->
+<a href="#nomeAncora">Link</a>
