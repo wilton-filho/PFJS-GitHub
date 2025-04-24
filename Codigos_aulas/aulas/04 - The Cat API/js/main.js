@@ -7,19 +7,28 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const mostrarGatos = async () => {
     msgAlerta("msgAlerta", "Aguardo. Carregando gatos...");
-    const gatos = await getCats(6);
+    const gatos = await getCats(10);
     gatos.length > 0 ? mostrarGatosPainel(gatos) : msgAlerta("msgAlerta", "Nenhum gato encontrado!");
     msgAlerta("msgAlerta", "");
 }
 
 const mostrarGatosPainel = (gatos) => {
+    console.log(gatos)
     const painelGatos = document.getElementById("painelGatos");
-    gatos.forEach(gato => {
+    gatos.forEach((gato) => {
+        const figure = document.createElement("figure");
         const img = document.createElement("img");
-        img.src = gato;
+        const figureCaption = document.createElement("figcaption");
+
+        figure.className = "boxGato";
+        img.src = gato.url;
         img.alt = "Gato";
         img.className = "gato";
-        painelGatos.appendChild(img);
+        figureCaption.innerHTML = `${gato.breeds[0].name} <br><br> ${gato.breeds[0].description}<bR>`;
+
+        figureCaption.appendChild(img);
+        figure.appendChild(figureCaption);
+        painelGatos.appendChild(figure);
     });
 }
 
