@@ -1,0 +1,32 @@
+.autoridade {
+    display: flex;
+    flex-direction: column;
+    width:1000px;
+    margin:auto;
+}
+
+.autoridade > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+.autoridade img {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.autoridade h2 {
+    text-align: center;
+}
+
+.autoridade p {
+    line-height: 1.5em;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.autoridade p::first-letter {
+    font-weight: bold;
+    font-size: 30px;
+    color: orangered;
+}
