@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //let vet = [10,20,30];
+        // Imprime todos os elementos do vetor acima
+        //vet.forEach(elemento => console.log(elemento));
+
+
+        let usersTable = [
+            {nome:"Wilton", idade: 45, salario:1000},
+            {nome:"Ana", idade: 17, salario:2000},
+            {nome:"Tiana", idade: 77, salario:3000}
+        ];
+
+        // console.log(usersTable[1].nome);
+        // console.log(usersTable[1].idade);
+        
+        // Imprime todos os usuarios da tabela usersTable
+        usersTable.forEach(user => {
+                if (user.idade >= 18)
+                    console.log(`${user.nome} tem ${user.idade} anos`)
+                }
+        );
+
+        // Imprime os nomes e salarios das pessoas com idade >= 18
+        usersTable.filter(user => user.idade >= 18).forEach(user => console.log(`${user.nome} ganha R$${user.salario}`));
+        
+    </script>
+
+</body>
+</html>
