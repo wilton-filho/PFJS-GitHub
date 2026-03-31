@@ -1,0 +1,5 @@
+[
+    {"nome":"Ana", "pontuacao":80, "nivel":"Fácil"},
+    {"nome":"Jose", "pontuacao":60, "nivel":"Médio"},
+    {"nome":"Tiao", "pontuacao":90, "nivel":"Difícil"}
+]
